@@ -22,9 +22,7 @@ export default function Table() {
               if(item.sdk_int){
                 item.sdk_int = item.sdk_int.toString();
               }
-              console.log(item.sdk_int);
             })
-            console.log('results: ', json.data);
             setData(json.data)
         } catch(error: any){
             setError(error);

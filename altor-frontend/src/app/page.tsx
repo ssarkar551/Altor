@@ -6,8 +6,10 @@ export default function Home() {
   return (
     <>
       Dashboard
+      <div>
       <Table/>
-      <div className="container">
+      </div>
+      <div className="">
         <PiechartDemo/>
       </div>
       

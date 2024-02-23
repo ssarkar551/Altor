@@ -77,7 +77,6 @@ export function DataTable<TData, TValue>({
           placeholder="Filter SDK"
           value={(table.getColumn("sdk_int")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>{
-            console.log('value: ', event.target.value);
             table.getColumn("sdk_int")?.setFilterValue(event.target.value)
           }
           }
