@@ -1,4 +1,3 @@
-// components/PieChartComponent.tsx
 import React from 'react';
 import { Pie } from 'react-chartjs-2';
 import { CategoryCounts } from '../../types/page';
@@ -10,16 +9,18 @@ interface PieChartProps {
 }
 
 const PieChartComponent: React.FC<PieChartProps> = ({ data, title }) => {
+    const backgroundColors = data.labels.map(() => generateRandomColor(0.2));
+    const borderColors = data.labels.map(() => generateRandomColor(1));
   const chartData = {
     labels: data.labels,
     datasets: [{
       label: title,
       data: data.values,
       backgroundColor: [
-        data.labels.map(() => generateRandomColor(0.2))
+        backgroundColors
       ],
       borderColor: [
-        data.labels.map(() => generateRandomColor(1))
+        borderColors
       ],
       borderWidth: 1,
     }],
